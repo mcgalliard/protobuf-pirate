@@ -2,7 +2,6 @@
 
 > Learn Protobuf. Pack light. Sail fast.
 
-[![Open the interactive journey](https://img.shields.io/badge/OPEN_THE_JOURNEY-F36B4F?style=for-the-badge)](https://proto-pirate-journey.mcgalliard.chatgpt.site/)
 [![Built with React](https://img.shields.io/badge/React_19-071D2B?style=for-the-badge&logo=react)](https://react.dev/)
 [![Powered by vinext](https://img.shields.io/badge/vinext-FFCB55?style=for-the-badge)](https://github.com/cloudflare/vinext)
 
@@ -10,17 +9,32 @@
 
 Proto Pirate is a visual, interactive introduction to Protocol Buffers. It teaches the core ideas as a five-stop voyage instead of a wall of documentation.
 
-## Choose your stop
+It is a self-contained local web project. It does not require an account, API key, hosted service, database, or external API.
 
-The links below jump directly into the hosted lesson:
+## Run it locally
 
-| Stop | What you learn | Try it |
+You need Node.js 22.13 or newer.
+
+```bash
+git clone https://github.com/mcgalliard/protobuf-pirate.git
+cd protobuf-pirate
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). Changes in `app/` reload automatically.
+
+## Lesson map
+
+Once the local server is running, the page follows these five stops:
+
+| Stop | What you learn | Local anchor |
 | --- | --- | --- |
-| 01 · The problem | Why schemas can send less data than repeated JSON keys | [Compare the cargo](https://proto-pirate-journey.mcgalliard.chatgpt.site/#map) |
-| 02 · The contract | How types, names, and field numbers form a `.proto` schema | [Build a schema](https://proto-pirate-journey.mcgalliard.chatgpt.site/#schema) |
-| 03 · The wire | How field tags and wire types become bytes | [X-ray the bytes](https://proto-pirate-journey.mcgalliard.chatgpt.site/#wire) |
-| 04 · The future | How unknown fields make gradual upgrades possible | [Evolve a message](https://proto-pirate-journey.mcgalliard.chatgpt.site/#evolve) |
-| 05 · The challenge | The rules for changing schemas without breaking clients | [Take the captain's test](https://proto-pirate-journey.mcgalliard.chatgpt.site/#challenge) |
+| 01 · The problem | Why schemas can send less data than repeated JSON keys | `/#map` |
+| 02 · The contract | How types, names, and field numbers form a `.proto` schema | `/#schema` |
+| 03 · The wire | How field tags and wire types become bytes | `/#wire` |
+| 04 · The future | How unknown fields make gradual upgrades possible | `/#evolve` |
+| 05 · The challenge | The rules for changing schemas without breaking clients | `/#challenge` |
 
 ## How the lesson works
 
@@ -42,19 +56,6 @@ flowchart LR
 ```
 
 The main experience lives in [`app/page.tsx`](app/page.tsx), the visual system is in [`app/globals.css`](app/globals.css), and the social artwork is [`public/og.png`](public/og.png).
-
-## Run locally
-
-You need Node.js 22.13 or newer.
-
-```bash
-git clone https://github.com/mcgalliard/protobuf-pirate.git
-cd protobuf-pirate
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000). Changes in `app/` reload automatically.
 
 ## Test a production build
 
